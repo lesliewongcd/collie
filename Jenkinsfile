@@ -20,6 +20,8 @@ pipeline {
 
     stage('job3') {
       steps {
+        copyArtifacts 'job1'
+        copyArtifacts 'job2'
         build 'job3'
       }
     }
