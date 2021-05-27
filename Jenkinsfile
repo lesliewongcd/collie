@@ -20,7 +20,7 @@ pipeline {
 
     stage('job3') {
       steps {
-        copyArtifacts 'job1'
+        copyArtifacts( 'job1',selector: specific("${built.number}"))
         copyArtifacts 'job2'
         build 'job3'
       }
