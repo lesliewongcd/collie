@@ -20,6 +20,7 @@ pipeline {
 
     stage('job3') {
       steps {
+        def built = build('job1');
         copyArtifacts( projectName: 'job1',selector: specific("${built.number}"))
         copyArtifacts 'job2'
         build 'job3'
