@@ -11,7 +11,7 @@ pipeline {
 
         stage('job2') {
           steps {
-            build(job: 'job-2', quietPeriod: 1)
+            build(job: 'job2', quietPeriod: 1)
           }
         }
 
@@ -20,7 +20,7 @@ pipeline {
 
     stage('job3') {
       steps {
-        build 'job-3'
+        build 'job33'
       }
     }
 
